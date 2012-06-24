@@ -1,0 +1,600 @@
+﻿<!doctype html>
+<html itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<head>
+	<meta itemprop="image" content="//www.google.com/images/google_favicon_128.png">
+	<title>Google</title>
+		<script>
+		window.google = {
+			kEI: "oaflT7GXOobfmAXjz9jACQ",
+			getEI: function (a) {
+				var b;
+				while (a && !(a.getAttribute && (b = a.getAttribute("eid")))) a = a.parentNode;
+				return b || google.kEI
+			},
+			https: function () {
+				return window.location.protocol == "https:"
+			},
+			kEXPI: "31215,36253,37102,37864,39000,39366,39370,39411,39423,39695,39737,39794",
+			kCSI: {
+				e: "31215,36253,37102,37864,39000,39366,39370,39411,39423,39695,39737,39794",
+				ei: "oaflT7GXOobfmAXjz9jACQ"
+			},
+			authuser: 0,
+			ml: function () {},
+			kHL: "ru",
+			time: function () {
+				return (new Date).getTime()
+			},
+			log: function (a, b, c, e) {
+				var d = new Image,
+					h = google,
+					i = h.lc,
+					f = h.li,
+					j = "";
+				d.onerror = (d.onload = (d.onabort = function () {
+					delete i[f]
+				}));
+				i[f] = d;
+				if (!c && b.search("&ei=") == -1) j = "&ei=" + google.getEI(e);
+				var g = c || "/gen_204?atyp=i&ct=" + a + "&cad=" + b + j + "&zx=" + google.time();
+				var k = /^http:/i;
+				if (k.test(g) && google.https()) {
+					google.ml(new Error("GLMM"), false, {
+						src: g
+					});
+					delete i[f];
+					return
+				}
+				d.src = g;
+				h.li = f + 1
+			},
+			lc: [],
+			li: 0,
+			Toolbelt: {},
+			y: {},
+			x: function (a, b) {
+				google.y[a.id] = [a, b];
+				return false
+			}
+		};
+		window.google.sn = "webhp";
+		window.google.timers = {};
+		window.google.startTick = function (a, b) {
+			window.google.timers[a] = {
+				t: {
+					start: (new Date).getTime()
+				},
+				bfr: !(!b)
+			}
+		};
+		window.google.tick = function (a, b, c) {
+			if (!window.google.timers[a]) google.startTick(a);
+			window.google.timers[a].t[b] = c || (new Date).getTime()
+		};
+		google.startTick("load", true);
+		try {
+			window.google.pt = window.gtbExternal && window.gtbExternal.pageT();
+		} catch (u) {}
+		var _gjwl = location;
+
+		function _gjuc() {
+			var b = _gjwl.href.indexOf("#");
+			if (b >= 0) {
+				var a = _gjwl.href.substring(b + 1);
+				if (/(^|&)q=/.test(a) && a.indexOf("#") == -1 && !/(^|&)cad=h($|&)/.test(a)) {
+					_gjwl.replace("/search?" + a.replace(/(^|&)fp=[^&]*/g, "") + "&cad=h");
+					return 1
+				}
+			}
+			return 0
+		}
+		function _gjp() {
+			!(window._gjwl.hash && window._gjuc()) && setTimeout(_gjp, 500)
+		};
+		window._gjp && _gjp();
+	</script>
+	<script src="turing12.3.js" async="true" type="text/javascript"></script>
+	<script>
+	
+	</script>
+</head>
+<body>
+<div id="hplogo"></div>
+<div id="xjsd"></div>
+<div id="xjsi">
+	<script>
+		if (google.y) google.y.first = [];
+		google.dlj = function (b) {
+			window.setTimeout(function () {
+				var a = document.createElement("script");
+				a.src = b;
+				document.getElementById("xjsd").appendChild(a)
+			}, 0)
+		};
+		(function () {
+			var c, d, e = false;
+
+			function f(a) {
+				var b = {
+					_sn: a ? "FAILURE" : "FALLBACK",
+					_pu: c,
+					_fu: d
+				},
+					h = google.ml(new Error("pml"), false, b, true);
+				google.log(0, "", h)
+			}
+			function g() {
+				if (!google.pml) f(true)
+			}
+			function i(a) {
+				var b = document.createElement("script");
+				b.src = a;
+				document.getElementById("xjsd").appendChild(b)
+			}
+			function j() {
+				if (!e && !google.pml) {
+					e = true;
+					f();
+					i(d, g)
+				}
+			}
+			google.dljp = function (a, b) {
+				c = a;
+				google.xjsu = a;
+				d = b;
+				if (!google.xjsi) window.setTimeout(function () {
+					i(c, j)
+				}, 0)
+			};
+		})();
+		(function () {
+			google.xjsol = function (a) {
+				if (google.sc && (a = google.sc[a])) {
+					for (var b = 0; b < a.cb.length; b++) a.cb[b]();
+					a.cb = [];
+					a.lc = !0
+				}
+			};
+			google.xjsl = function (a, b) {
+				var c = google.sc[a];
+				c && (b && (c.lc ? b() : c.cb.push(b)), !c.ls && !c.lc && (google.dlj(c.u), c.ls = !0))
+			};
+			google.register = google.register ||
+			function (a, b) {
+				google.y.first.push(function () {
+					google.register(a, b)
+				})
+			};
+		})();
+		google.y.first = [];
+		if (!google.xjs) {
+			google.dstr = [];
+			google.rein = [];
+			window._ = window._ || {};
+			window._._DumpException = function (e) {
+				throw e
+			};
+			if (google.timers && google.timers.load.t) {
+				google.timers.load.t.xjsls = new Date().getTime();
+			}
+			google.xjsuo =
+				'rs.js';	'https://www.google.com/xjs/_/js/s/s,st,anim,bbd,sb,hv,wta,cr,cdos,pj,tbpr,tbui,spn,rsn,ob,mb,lc,du,ada,bihu,lu,m,tng,ablk,hsm,cp,pcc,csitl/rt\x3dj/ver\x3dcQPWT20rjmA.en_US./d\x3d1/rs\x3dAItRSTMrrebjXekqCRh-6t6eA1DHRj0V7g';
+			if (google.xjsuop) google.xjsuo = google.xjsuo.replace(/xjs\/_\/js/, google.xjsuop);
+			google.dljp(google.xjsuo,
+				'rs.js');	//'https://www.google.com/xjs/_/js/s/s,st,anim,bbd,sb,hv,wta,cr,cdos,pj,tbpr,tbui,spn,rsn,ob,mb,lc,du,ada,bihu,lu,m,tng,ablk,hsm,cp,pcc,csitl/rt\x3dj/ver\x3dVhqBgPa68yo.en_US./d\x3d1/rs\x3dAItRSTNVtd_7RGA-1diChwBGjIknyJlDUQ');
+			google.xjs = 1
+		}(function () {
+			var a = false,
+				b;
+
+			function j() {
+				return document.documentElement.clientHeight
+			}
+
+			function m(d, i, k) {
+				var r = d.offsetHeight ? k - d.offsetHeight : k + 10,
+					s = i - r - 10,
+					l = Math.max(s, 0);
+				d.style.height = l + "px";
+				return l
+			}
+			function n() {
+				if (google.sn == "web") {
+					o();
+					return
+				}
+				if (!b) return;
+				m(b, j(), document.body.offsetHeight)
+			}
+			function p() {
+				if (google.sn == "web" || a) return;
+				b = document.getElementById("footer");
+				if (!b) return;
+				if (window.addEventListener) window.addEventListener("resize", n, false);
+				else window.attachEvent("onresize", n);
+				b.style.display = "block";
+				n();
+				a = true
+			}
+			function o() {
+				if (!a) return;
+				if (window.removeEventListener) window.removeEventListener("resize", n, false);
+				else window.detachEvent("onresize", n);
+				a = false;
+				b = document.getElementById("footer");
+				b && (b.style.display = "none")
+			}
+			if (google.rein && google.dstr) {
+				google.rein.push(function () {
+					p()
+				});
+				google.dstr.push(function () {
+					o()
+				})
+			}
+			p();
+		})();;
+		google.pmc = {
+			14: {},
+			263: {},
+			60: {},
+			81: {},
+			10: {
+				"client": "hp",
+				"dh": true,
+				"ds": "",
+				"fl": true,
+				"host": "google.com",
+				"jsonp": true,
+				"kbl": "ru",
+				"kbv": 5,
+				"lyrs": 17,
+				"msgs": {
+					"lcky": "Мне повезёт!",
+					"lml": "Подробнее...",
+					"psrc": "Этот запрос был удален из вашей \u003Ca href=\"/history\"\u003Eистории веб-поиска\u003C/a\u003E",
+					"psrl": "Удалить",
+					"srch": "Поиск в Google"
+				},
+				"ovr": {
+					"ms": 1
+				},
+				"pq": "",
+				"rgen": true,
+				"scd": 10,
+				"sce": 4,
+				"stok": "K7nSbX2piK33nx1yl9hmtTNRrKw"
+			},
+			152: {},
+			43: {
+				"qir": false,
+				"rctj": true,
+				"ref": true,
+				"uff": false
+			},
+			83: {
+				"bih": 1303,
+				"biw": 1612
+			},
+			213: {
+				"pberr": "\u003Cfont color=red\u003EОшибка.\u003C/font\u003E Серверу не удалось выполнить ваш запрос. Повторите попытку через 30 секунд."
+			},
+			114: {
+				"rvu_report_msg": "Пожаловаться",
+				"rvu_reported_msg": "Жалоба отправлена"
+			},
+			78: {},
+			25: {
+				"g": 28,
+				"k": true,
+				"m": {
+					"app": true,
+					"bks": true,
+					"blg": true,
+					"dsc": true,
+					"evn": true,
+					"fin": true,
+					"flm": true,
+					"frm": true,
+					"isch": true,
+					"klg": true,
+					"mbl": true,
+					"nws": true,
+					"plcs": true,
+					"ppl": true,
+					"prc": true,
+					"pts": true,
+					"rcp": true,
+					"shop": true,
+					"vid": true
+				},
+				"t": null
+			},
+			216: {},
+			105: {},
+			22: {
+				"db": false,
+				"m_errors": {
+					"32": "Больше результатов нет",
+					"default": "\u003Cfont color=red\u003EОшибка.\u003C/font\u003E Серверу не удалось выполнить ваш запрос. Повторите попытку через 30 секунд."
+				},
+				"m_tip": "Нажмите, чтобы получить дополнительную информацию",
+				"nlpm": "-153px -84px",
+				"nlpp": "-153px -70px",
+				"utp": true
+			},
+			77: {},
+			254: {},
+			146: {},
+			144: {},
+			121: {},
+			167: {
+				"MESSAGES": {
+					"msg_img_from": "Изображение с сайта %1$s",
+					"msg_ms": "Другие размеры",
+					"msg_si": "Похожие"
+				}
+			},
+			63: {
+				"cnfrm": "Жалоба отправлена",
+				"prmpt": "Пожаловаться"
+			},
+			84: {
+				"cm_hov": true,
+				"tt_kft": true,
+				"uab": true
+			},
+			97: {},
+			151: {
+				"ab": {
+					"on": true
+				},
+				"ajax": {
+					"gl": "us",
+					"gwsHost": "",
+					"hl": "ru",
+					"maxPrefetchConnections": 2,
+					"prefetchTotal": 5,
+					"q": "",
+					"requestPrefix": "/ajax/rd?"
+				},
+				"css": {
+					"adpbc": "#fec",
+					"adpc": "#fffbf2",
+					"def": false
+				},
+				"elastic": {
+					"js": true,
+					"rhs4Col": 1088,
+					"rhs5Col": 1176,
+					"rhsOn": true,
+					"tiny": false
+				},
+				"exp": {
+					"lru": true
+				},
+				"kfe": {
+					"adsClientId": 33,
+					"clientId": 29,
+					"kfeHost": "clients1.google.com",
+					"kfeUrlPrefix": "/webpagethumbnail?r=4\u0026f=3\u0026s=400:585\u0026query=\u0026hl=ru\u0026gl=us",
+					"vsH": 585,
+					"vsW": 400
+				},
+				"logging": {
+					"csiFraction": 0.050
+				},
+				"msgs": {
+					"details": "Подробнее...",
+					"hPers": "Скрыть персональные результаты",
+					"loading": "Идет загрузка...",
+					"mute": "Выключить звук",
+					"noPreview": "Просмотр недоступен",
+					"sPers": "Показать персональные результаты",
+					"unmute": "Включить звук"
+				},
+				"nokjs": {
+					"on": true
+				},
+				"time": {
+					"hOff": 50,
+					"hOn": 300,
+					"hSwitch": 200,
+					"hTitle": 1200,
+					"hUnit": 1500,
+					"loading": 100,
+					"timeout": 2500
+				}
+			},
+			116: {
+				"bd": [],
+				"bk": [],
+				"bu": [],
+				"gl": "",
+				"mb": 500,
+				"msgs": {
+					"a": "Заблокировать все результаты с %1$s",
+					"b": "\u003Cb\u003EНе помогло?\u003C/b\u003E Войдите в аккаунт, чтобы заблокировать результаты с сайта \u003Cb\u003E%1$s\u003C/b\u003E.",
+					"c": "Результаты поиска с сайта \u003Cb\u003E%1$s\u003C/b\u003E больше не будут отображаться.",
+					"d": "Управление заблокированными сайтами",
+					"e": "Отменить",
+					"f": "Разблокировать %1$s",
+					"g": "Сайт %1$s разблокирован"
+				},
+				"q": "",
+				"rb": true
+			},
+			186: {
+				"m": {
+					"c": "Блокировать рекламу с %1$s",
+					"d": "Реклама с сайта %1$s больше не будет появляться.",
+					"e": "Заблокированные рекламодатели",
+					"f": "Отменить"
+				},
+				"q": "",
+				"t": 100
+			},
+			164: {},
+			111: {
+				"cdu": true,
+				"chl": "http://www.google.com/logos/classicplus.png",
+				"chlh": 95,
+				"chlw": 275,
+				"cnph": true,
+				"kv": 100,
+				"msg": {
+					"cprpt": "Предыдущие фоны",
+					"cpyc": "Со своего компьютера",
+					"cpyppt": "Из Веб-альбомов Picasa",
+					"cpyrpt": "Последние выбранные",
+					"ld": "Загрузка..."
+				}
+			},
+			24: {},
+			38: {}
+		};
+		google.y.first.push(function () {
+			try {
+				(function () {
+					function e() {
+						var a = null;
+						if (window.ActiveXObject) {
+							a = new ActiveXObject("Msxml2.XMLHTTP");
+							if (!a) a = new ActiveXObject("Microsoft.XMLHTTP")
+						} else if (window.XMLHttpRequest) a = new XMLHttpRequest;
+						return a
+					}
+					function f(a) {
+						if (window.execScript) window.execScript(a, "JavaScript");
+						else if (window.eval) {
+							var b = null;
+							window.eval("var _et_ = 1;");
+							if (typeof window._et_ != "undefined") {
+								delete window._et_;
+								b = true
+							} else b = false;
+							if (b) window.eval(a);
+							else {
+								var d = window.document,
+									c = d.createElement("script");
+								c.type = "text/javascript";
+								c.defer = false;
+								c.appendChild(d.createTextNode(a));
+								d.body.appendChild(c);
+								d.body.removeChild(c)
+							}
+						}
+					}
+					function g(a) {
+						var b = a;
+						if (b && b.length > 0) {
+							b = b.substring(27);
+							if (b.substring(0, 6) == "initcp") b = "google.cp." + b
+						}
+						f(b)
+					}
+					function h(a) {
+						if (a.readyState == 4 && (a.status == 200 || a.status == 304)) try {
+							g(a.responseText)
+						} catch (b) {}
+					}
+					function i() {
+						/*if (window.google && (!window.google.cp || window.google.cp.initcp && !window.google.cp.o)) {
+							window.google.cp = window.google.cp || {};
+							window.google.cp.o = {
+								l: "\x3cdiv id\x3dhplogo style\x3d\x22height:229px;position:relative;width:487px;background:url(http://www.google.com/logos/2012/turing12-hp-base.jpg) 47px 13px no-repeat\x22 dir\x3dltr\x3e\x3c/div\x3e\x3cscript\x3e(function(){window.google||(window.google\x3d{});google.doodle||(google.doodle\x3d{});google.doodle.url\x3d\x22/search?q\x3d%D0%90%D0%BB%D0%B0%D0%BD+%D0%A2%D1%8C%D1%8E%D1%80%D0%B8%D0%BD%D0%B3\x26oi\x3dddle\x26ct\x3dturing-doodle-static\x22;google.doodle.alt\x3d\x22100 лет со дня рождения Алана Тьюринга\x22;var a\x3ddocument.createElement(\x22script\x22);a.src\x3d\x22http://www.google.com/logos/2012/turing12.3.js\x22;a.async\x3d!0;document.body.appendChild(a);})();\x3c/script\x3e",
+								h: true,
+								a: "",
+								t: "",
+								u: "",
+								x: 0,
+								y: 0,
+								d: true
+							};
+							window.google.cp.p = 207;
+							var a = e();
+							if (a) {
+								a.open("GET", "http://www.google.com/ig/cp/get?hl=ru&gl=&authuser=0&bundleJs=0", true);
+								a.onreadystatechange = function () {
+									h({responseText:'initcp([,true,true,"4fe6844frQ_JBrDF",false,0,false,true], [,,,,,["Изменить фон","Убрать фон","Назад к изображению","Установите свой фон для главной страницы Google","Из веб-альбома Picasa","С компьютера","Из галереи","Загрузка изображения...","Фоновое изображение недоступно.","Выберите новое изображение","Рекомендуемые","Подробнее...","Сервис установки фона недоступен. Попробуйте позже.","В работе сервиса установки фона произошла ошибка. Попробуйте позже.","Закрыть окно","Не удалось загрузить изображение. Повтор попытки через %1$s с.","Не повторять","Нажмите, чтобы увидеть сегодняшний дудл","Фоновое изображение появится после входа в аккаунт"]]);'})
+									//a)
+								};
+								a.send(null)
+							}
+						}*/
+						
+					}
+					i();
+				})();;
+			} catch (e) {
+				google.ml(e, false, {
+					'cause': 'defer'
+				});
+			}
+			if (google.med) {
+				google.med('init');
+				google.initHistory();
+				google.med('history');
+			}
+			google.History && google.History.initialize('/')
+		});
+		if (google.j && google.j.en && google.j.xi) {
+			window.setTimeout(google.j.xi, 0);
+		}
+	</script>
+
+</div>
+	<script>
+
+		(function () {
+			var b, d, e, f;
+
+			function g(a, c) {
+				if (a.removeEventListener) {
+					a.removeEventListener("load", c, false);
+					a.removeEventListener("error", c, false)
+				} else {
+					a.detachEvent("onload", c);
+					a.detachEvent("onerror", c)
+				}
+			}
+			function h(a) {
+				f = (new Date).getTime();
+				++d;
+				a = a || window.event;
+				var c = a.target || a.srcElement;
+				g(c, h)
+			}
+			var i = document.getElementsByTagName("img");
+			b = i.length;
+			d = 0;
+			for (var j = 0, k; j < b; ++j) {
+				k = i[j];
+				if (k.complete || typeof k.src != "string" || !k.src)++d;
+				else if (k.addEventListener) {
+					k.addEventListener("load", h, false);
+					k.addEventListener("error", h, false)
+				} else {
+					k.attachEvent("onload", h);
+					k.attachEvent("onerror", h)
+				}
+			}
+			e = b - d;
+
+			function l() {
+				if (!google.timers.load.t) return;
+				google.timers.load.t.ol = (new Date).getTime();
+				google.timers.load.t.iml = f;
+				google.kCSI.imc = d;
+				google.kCSI.imn = b;
+				google.kCSI.imp = e;
+				if (google.stt !== undefined) google.kCSI.stt = google.stt;
+				google.timers.load.t.xjs && google.report && google.report(google.timers.load, google.kCSI)
+			}
+			if (window.addEventListener) window.addEventListener("load", l, false);
+			else if (window.attachEvent) window.attachEvent("onload", l);
+			google.timers.load.t.prt = (f = (new Date).getTime());
+		})();
+	</script>
+</body>
+</html>

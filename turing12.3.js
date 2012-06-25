@@ -2725,14 +2725,14 @@
 		}
 	};
 	var s = function (a) {
-			a = fa[a] || ga[a];
+			a = fa[a] || ga[a] || {width:35,height:45};
 			return {
 				width: a.width,
 				height: a.height
 			}
 		},
 		t = function (a) {
-			var b = fa[a] || ga[a];
+			var b = fa[a] || ga[a] || {width:35,height:45};
 			return !b ? "red" : "url(" + (!fa[a] && ga[a] ? "turing12-hp-deferredsprite.png" : "turing12-hp-sprite.png") + ") " + -b.x + "px " + -b.y + "px no-repeat"
 		},
 		v = function (a) {
@@ -3035,8 +3035,9 @@
 		this.d.style.top = "127px";
 		this.d.style.zIndex = 499;
 		this.d.style.cursor = "pointer";
-		var t=this;
-		this.ja = function () { console.log('down', t.qb, t); return j(t.qb, t);};
+		//var t=this;
+		//this.ja = function () { console.log('down', t.qb, t); return j(t.qb, t);};
+		this.ja = j(this.qb, this);
 		p(this.d, "mousedown", this.ja);
 		p(this.d, "touchstart", this.ja);
 		this.Ma = j(this.tb, this);
@@ -3118,9 +3119,11 @@
 	};
 	var Ja = function () {};
 	Ja.prototype.create = function (a) {
+			console.log(333, a)
+
 		this.V = u();
 		this.V.style.width = a.offsetWidth + "px";
-		this.V.style.height = a.offsetHeight + "px";
+		this.V.style.height = (a.offsetHeight || 229) + "px";
 		this.V.style.cursor = "pointer";
 		this.V.style.zIndex = 500;
 		this.bb = j(this.xb, this);
@@ -3672,20 +3675,20 @@
 		}, {
 			z: "11011",
 			p: "01011",
-			a: T("L D1(D_) B2", ". R	  0"),
+			a: T("L D1(D_) B2", ". R      0"),
 			ea: e,
 			A: 3,
 			G: "b"
 		}, {
 			z: "0_001",
 			p: "01001",
-			a: T("L L D0(D_) R  D1 B3", ". . 1	  U1"),
+			a: T("L L D0(D_) R  D1 B3", ". . 1      U1"),
 			A: 4,
 			G: "g"
 		}, {
 			z: "01111",
 			p: "10000",
-			a: T("L L D0(D1) 0(1) R   D_ B4", ". . *0	 .	*U0"),
+			a: T("L L D0(D1) 0(1) R   D_ B4", ". . *0     .    *U0"),
 			A: 5,
 			G: "r"
 		}, {
@@ -3697,13 +3700,13 @@
 		}, {
 			z: "01_01",
 			p: "00011",
-			a: T("L D_(D1) B2 . L	  1  L 0", ". .	  0  R U_(U1) B2 . ."),
+			a: T("L D_(D1) B2 . L      1  L 0", ". .      0  R U_(U1) B2 . ."),
 			A: 1,
 			G: "r"
 		}, {
 			z: "00111",
 			p: "00011",
-			a: T("D_(D1) 1  L	  D_(D1) 1 L	  D_(D0) 1", "1	  R  U_(U1) 0	  R U_(U1) 0	  *U_"),
+			a: T("D_(D1) 1  L      D_(D1) 1 L      D_(D0) 1", "1      R  U_(U1) 0      R U_(U1) 0      *U_"),
 			A: 2,
 			G: "y"
 		}, {
@@ -3722,7 +3725,7 @@
 		}, {
 			z: "00001",
 			p: "10000",
-			a: T("D0(D1) R . D0(D_) B4", "0	  L 1 L	  U_(U0)"),
+			a: T("D0(D1) R . D0(D_) B4", "0      L 1 L      U_(U0)"),
 			fb: 80,
 			A: 5,
 			G: "r"
@@ -4000,7 +4003,8 @@
 		Sb = function () {
 			google.doodle.ab && (S.save(), Bb(), va(), R.stop(), X.destroy(), H.destroy(), vb.destroy(), m && (m.destroy(), m = g), k && (k.destroy(), k = g), V.destroy(), W.destroy(), google.doodle.ab = i)
 		};
-	window.google && window.google.x00 ? window.google.x({
+	console.log(window.google && window.google.x, window.google.y)
+	window.google && window.google.x00 ? window.google.x({ //DEBUG x -> x00
 		id: "DOODLE"
 	}, Rb) : Rb();
 })();

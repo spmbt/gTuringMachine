@@ -3065,7 +3065,7 @@
 			a.d.style.cursor = "pointer"
 		};
 	J.prototype.qb = function () {
-		console.log('down');
+		//console.log('down');
 		this.ga && !this.la && (F(this.d, ["play-out", "play-flat"], 20), this.la = e)
 	};
 	J.prototype.tb = function () {
@@ -3119,8 +3119,7 @@
 	};
 	var Ja = function () {};
 	Ja.prototype.create = function (a) {
-			console.log(333, a)
-
+			//console.log(333, a)
 		this.V = u();
 		this.V.style.width = a.offsetWidth + "px";
 		this.V.style.height = (a.offsetHeight || 229) + "px";
@@ -4003,7 +4002,7 @@
 		Sb = function () {
 			google.doodle.ab && (S.save(), Bb(), va(), R.stop(), X.destroy(), H.destroy(), vb.destroy(), m && (m.destroy(), m = g), k && (k.destroy(), k = g), V.destroy(), W.destroy(), google.doodle.ab = i)
 		};
-	console.log(window.google && window.google.x, window.google.y)
+	//console.log(window.google && window.google.x, window.google.y)
 	window.google && window.google.x00 ? window.google.x({ //DEBUG x -> x00
 		id: "DOODLE"
 	}, Rb) : Rb();

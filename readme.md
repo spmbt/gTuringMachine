@@ -1,8 +1,9 @@
-﻿Deobfuscated JS code:
+﻿## Deobfuscated JS code:  _Turing Mashine, reversed from Google doodle_ (2012-06-24) 
 
-_Turing Mashine, reversed from Google doodle_ (2012-06-24) 
+**_Article_**: http://habrahabr.ru/post/146444/
 
-_Article_: http://habrahabr.ru/post/146444/
+**_Wiki_** (1 page): https://github.com/spmbt/gTuringMachine/wiki
+
 
 _2012-06-25_: Changes by user "rrock". File googleTuring.htm is works with 3 levels of game now.
 

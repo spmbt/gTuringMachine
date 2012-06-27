@@ -12,3 +12,5 @@ _2012-06-26, 03:30_:  We obtain version with launch of both files - gTuring01.ht
 _2012-06-26, 05:30_: Minimal variant with little _index.htm_.
 
 ![ ](http://img507.imageshack.us/img507/5629/turingdeobf1.png)
+
+http://habrate.ru/gTuringMachine/ - demo.

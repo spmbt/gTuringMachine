@@ -13,4 +13,4 @@ _2012-06-26, 05:30_: Minimal variant with little _index.htm_.
 
 ![ ](http://img507.imageshack.us/img507/5629/turingdeobf1.png)
 
-http://habrate.ru/gTuringMachine/ - demo.
+http://spmbt.kodingen.com/gTuringMachine/index.htm - demo.
